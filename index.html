@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Pc-centre style.css">
+    <title>Pc Center</title>
+      </head>
+      <body>
+         <!-- ================================================NavBar===================================================== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a href="index2.html"><img src="1-removebg-preview (1).png" id="logo"></a>
+          <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle navbar-text navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                All Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Computer/Laptop</a></li>
+                <li><a class="dropdown-item" href="#">Software</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+              </ul>
+            </li>
+          </ul>
+            
+          <a class="navbar-brand navbar-text" href="Popular Brand.html">Popular Brands</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" aria-current="page" href="Our_servicse2.html">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" href="Contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" href="AboutUs.html">About Us </a>
+            </li>
+          </ul>
+        </div>
+        <a class="nav-link navbar-text navbar-brand" href="#">
+          <h3><i class="bi bi-cart4"></i></h3>
+          </a>
+          <a class="nav-link navbar-text navbar-brand" href="#">
+            <div id="myOverlay" class="overlay">
+              <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+              <div class="overlay-content">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div>
+            </div>
+              <h3><i class="bi bi-search" class="openBtn" onclick="openSearch()"></i></h3>
+          </a>
+        <a class="nav-link navbar-text navbar-brand" href="#">
+          Log in/Sign Up
+        </a>
+      </div>
+    </nav>
+    <!-- ==================================================SearchBar================================================ -->
+    <div id="Searchbar">
+      
+    </div><br><br>
+    <!-- ================================================SALE DEALS====================================================== -->
+    <div id="deals">
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210621.png"></div>
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210658.png"></div>
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210739.png"></div>
+    </div>
+
+
+    <!-- ========================================================SIDE BAR===================================================================== -->
+
+    
+    <div id="mySidenav" class="sidenav fixed-top">
+      <a href="#" id="about" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <i class="bi bi-whatsapp"></i>
+        </svg>Whatsapp</a>
+      <a href="#" id="blog" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg>Phone</a>
+      <a href="#" id="projects" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+          <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
+          <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
+        </svg>Mail</a>
+  </div>
+
+
+<!-- ====================================================================Products================================================================= -->
+          <center><h1>New Arrivals</h1></center>
+          <hr>
+<div style="width: 100%; height: 60pc;">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="product5.webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>MIBRO</h3>
+            <p>Smart Watch</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>MIBRO SMART WATCH</h1> 
+            <h3>758 JFAXK</h3> 
+            <p>RS.5000</p>
+            <a href="Page_1.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="pawor_1.webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Baseus Bipow</h3>
+            <p>Power bank</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Baseus Bipow Digital Display Black</h1> 
+            <h3>Power bank 10000mAh 20W – </h3> 
+            <p>RS. 3,900</p>
+            <a href="page_2.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="product9.png" alt="Avatar" style="width:270px;height:250px;">
+            <h3>iPhone 13</h3>
+            <p>Silicone Case </p>
+          </div>
+          <div class="flip-card-back">
+            <h1>iPhone 13</h1> 
+            <h3>Silicone Case </h3> 
+            <p>RS. 900</p>
+            <a href="Page_3.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="faster_1.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>FASTER S10-PD</h3>
+            <p>Super Mini 20W Power Bank</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>FASTER S10-PD </h1> 
+            <h3>Super Mini 20W Power Bank 10000 mAh</h3> 
+            <p>RS. 4,999</p>
+            <a href="Page_4.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="air_2.webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Apple Airpod </h3>
+            <P>Black New Apple Airpod Pro</P>
+          </div>
+          <div class="flip-card-back">
+            <h1>Apple Airpod Pro Hengxuan</h1> 
+            <h3>Black New Apple Airpod Pro</h3> 
+            <p>RS.3,550</p>
+            <a href="Page_5.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="product1(a).jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>A4Tech OP330S</h3>
+            <P> Silent Optical Wired Mouse</P>
+          </div>
+          <div class="flip-card-back">
+            <h1>A4Tech OP330S</h1> 
+            <h3>Silent Optical Wired Mouse</h3> 
+            <p>RS. 1,150</p>
+            <a href="Page_6.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="camera_1.webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>A4tech PK-710G</h3> 
+            <p>720p HD Webcam</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>A4tech PK-710G</h1> 
+            <h3>720p HD Webcam</h3> 
+            <p>RS.4,450</p>
+            <a href="Page_7.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="heandfree_1.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>BOYA BY-M1</h3> 
+            <p>Microphone</p> 
+          </div>
+          <div class="flip-card-back">
+            <h1>BOYA BY-M1</h1> 
+            <h3>Microphone</h3> 
+            <p>RS.2,150</p>
+            <a href="Page_8.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="pots_2.webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>HAYLOU G3 TWS</h3> 
+            <p>Gaming Wireless Earphone</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>HAYLOU G3 TWS</h1> 
+            <h3>Gaming Wireless Earphone</h3> 
+            <p>RS. 9,699</p>
+            <a href="Page_9.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="x_box_1.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Q96 Tv Box</h3> 
+            <p>Q96 Max Android Tv Box</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Q96 Max Android Tv Box</h1> 
+            <h3>Q96 Max Android Tv Box</h3> 
+            <p>RS.4,650</p>
+            <a href="Page_10.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="charger_1.png" alt="Avatar" style="width:270px;height:250px;">
+            <h3>iPhone charger </h3> 
+            <p>20w Adapter+Cable Combo</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>iPhone charger</h1> 
+            <h3>20w Adapter+Cable Combo</h3> 
+            <p>RS. 2,500</p>
+            <a href="Page_11.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="headphone_1.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Logitech H110 </h3> 
+            <p>Stereo Headphone</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Logitech H110</h1> 
+            <h3>Stereo Headphone</h3> 
+            <p>RS.3,700</p>
+            <a href="Page_12.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#d78947" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =======================================================Load More========================================================================= -->
+   <div class="load_more">
+     <center>
+    <button id="load_more_id">Load More</button></center>
+    <div class="load_more_products" id="load_more_products_id">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="speaker_2.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Itel Bluetooth Speaker</h3>
+            <p>Itel 2580FSB 2.1</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Itel Bluetooth Speaker</h1> 
+            <h3> Baseus Bipow Itel 2580FSB 2.1 Bluetooth Speaker</h3> 
+            <p>RS. 11,900</p>
+            <a href="Page_13.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#6eff3e" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="product6(a).webp" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Realme Buds Air 2</h3>
+            <p>Realme Buds Air 2</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Realme Buds Air 2</h1> 
+            <h3>Realme Buds Air 2</h3> 
+            <p>RS. 10,999</p>
+            <a href="Page_14.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#6eff3e" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="google_1.png" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Google Chromecast</h3>
+            <p>(4th Generation) with Google TV</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Google Chromecast</h1> 
+            <h3>(4th Generation) with Google TV</h3> 
+            <p>RS. 13,950</p>
+            <a href="Page_15.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#6eff3e" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="lexar_3.jpg" alt="Avatar" style="width:270px;height:250px;">
+            <h3>Lexar SL210</h3>
+            <p>Lexar SL210 1TB External SSD</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Logi Tech Headphone</h1> 
+            <h3>Lexar SL210 1TB External SSD</h3> 
+            <p>RS. 24,350</p>
+            <a href="Page_16.html" style="--clr:#b74737" class="bt"><span class="bt2">More Info</span><i class="bt3"></i></a>
+            <br><br>
+            <a href="Payment.html" style="--clr:#6eff3e" class="bt"><span class="bt2">Add to Cart</span><i class="bt3"></i></a>
+          </div>
+        </div>
+      </div>
+      
+    <br><br><br><br><br><br> 
+</div>
+
+<!-- ========================================================Feature Slider======================================== -->
+<h1>Featured Manufacturers:</h1>
+    <hr>
+<div class="container-xl">
+	<div class="row">
+		<div class="col-md-9  mx-auto">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+				   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="Adope_logo2.png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="Dell_logo (2).png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="Apple_logo2.png" class="img-fluid" alt=""></div></div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="Huawei_logo2.png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="Xbox_logo2.png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="samsung-logo-text-png-2.png" class="img-fluid" alt=""></div></div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-sm-4"><div class="img-box"><img src="Infinix2.png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="Panasonic_logo2.png" class="img-fluid" alt=""></div></div>
+							<div class="col-sm-4"><div class="img-box"><img src="Philips_logo2.png" class="img-fluid" alt=""></div></div>
+						</div>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ===================================================Up footer====================================================== -->
+<div id="test">
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+   
+      <div class="card-body">
+       <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16" id="sag">
+          <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
+          <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"/>
+        </svg>
+  
+        <h5 class="card-title">Free Shipping</h5>
+        <p class="card-text">For All Order Over Rs.<br5,000</p></center>
+      </div>
+    </div>
+
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+      
+      <div class="card-body">
+        <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16" id="sag">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+          <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+        </svg>
+        <h5 class="card-title">Delivery</h5>
+        <p class="card-text">Fastest & Safest COD <br> Service</p></center>
+      </div>
+    </div>
+
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+     
+      <div class="card-body">
+        <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16" id="sag">
+          <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+        </svg>
+        <h5 class="card-title">Quality Service</h5>
+        <p class="card-text">We Deliver Since 2020 <br>Quality Sevices</p></center>
+      </div>
+    </div>
+    </div>
+      <!-- ===================================================footer====================================================== -->
+      <footer>
+        <div class="footer-con">
+            <div class="footer-row">
+                <div class="footer-col" id="company">
+                    <img src="1-removebg-preview (1).png" class="company-logo">
+                    <p>PC CENTRE is one of the Pakistan’s Largest Online Store for IT Solutions. 
+                    Provide Wide Range of Hardwares, Softwares, Gadgets & Accessories at Affordable Prices.</p>
+                    
+                </div>
+                <div class="footer-col" id="all-categories">
+                 <h3>All Categories</h3>
+                 <div class="footer-links">
+                    <a href="#">Computer/Laptop</a>
+                    <a href="#">Softwares</a>
+                    <a href="#">E-watches</a>
+                    <a href="#">Computer Accessories</a>
+                    <a href="#">Mobile Accessories</a>
+                    <a href="#">Gadgets</a>
+                 </div>
+                </div>
+                <div class="footer-col" id="shop">
+                    <h3>Shop</h3>
+                    <div class="footer-links">
+                    <a href="#">Popular Brands</a>
+                    <a href="#">Sales & Deals</a>
+                    <a href="#">Shop3</a>
+                    <a href="#">Shop4</a>
+                    <a href="#">Shop4</a>
+                    <a href="#">Shop4</a>    
+                    </div>
+                </div>
+                <div class="footer-col" class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-deatails">
+                        <i class="fa fa-location"></i>
+                        <p>36 Street,Parklane <br>Zurich, Switzerland</p>
+                    </div>
+                    <div class="contact-deatails">
+                        <i class="fa fa-phone"></i>
+                        <p>+1-0987654321</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-form">
+                    <form action="">
+                        <h2>Subscribe To Newsletter</h2>
+                        <input type="text" placeholder="Enter Your Email...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>    
+    </footer>
+      
+
+
+<!-- ======================================================Load More Js========================================================================== -->
+   <script>
+    var load_more_id=document.getElementById('load_more_id');
+    var load_more_products_id=document.getElementById('load_more_products_id');
+   
+    load_more_id.addEventListener('click',() => {
+    load_more_products_id.style='display:block';
+    load_more_id.style="display:none";
+    });
+   </script>
+<!-- ======================================================Header Js================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!-- =================================================Feature Slider CDN==================================================================== -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+  function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+
+  </body>
+</html>
+      

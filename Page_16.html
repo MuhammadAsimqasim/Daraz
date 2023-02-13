@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAge_16</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      /* ======================================================product page1================================================= */
+      .product{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .wrapper{
+        width: 90%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .product-text{
+        flex-basis: 45%;
+        margin-left: 50PX;
+      }
+      .all-images{
+        height: 80vh; 
+        display: flex;
+      }
+      .small-images{
+        display: flex;
+        flex-direction: column;
+      }
+      .small-images img{
+        height: 19vh;
+        margin-bottom: 9px;
+        cursor: pointer;
+        opacity: 0.6;
+      }
+      .small-images img:hover{
+        opacity: 1;
+      }
+      .main-images img{
+        height: 100%;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+      .brand{
+        background-color: #b74737;
+        width: fit-content;
+        color: #fff;
+        font-size: 12px;
+        padding: 2px 5px;
+      }
+
+      h2{
+        font-size: 35px;
+        color: #54758e;
+         margin-bottom: 20px;
+      }
+      .review{
+        background-color: #d78947;
+        display: inline-block;
+        color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 15px;
+      }
+      .review .fa{
+        counter-reset: #fff;
+      }
+
+      .price{
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+
+      .price-box{
+        display: flex;
+        align-items: center;
+      }
+      #input-quantity{
+        width: 30px;
+        border: 1px solid #ccc;
+        font-weight: bold;
+        text-align: center;
+      }
+      .cart-button{
+        width: 140px;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        background-color: #b74737;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .buy-button{
+        width: 140px;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        background-color: #54758e;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      button .fa{
+        margin-right: 10px;
+      }
+
+      @media only screen and ( max-width:1200px){
+        .wrapper{
+          flex-direction: column;
+          height: auto;
+          padding: 5% 0;
+        }
+      }
+      .product-text{
+        padding-top: 200px;
+      }
+      @media only screen and (max-width:600px){
+        .all-images{
+          flex-direction: column;
+          height: auto;
+        }
+        .small-images{
+          flex-direction: row;
+          justify-content: space-evenly;
+          order: 1;
+
+        }
+        .product-box{
+          width: 100%;
+
+        }
+        .main-images img{
+          width: 100%;
+
+        }
+        .small-images img{
+          width: 25%;
+        }
+        h2{
+          font-size: 25px;
+        }
+      }
+      /* <!-- ================================================NavBar===================================================== --> */
+      #logo{
+            height: 120px;
+            width: 120px;
+        }
+        /* <!-- ==================================================SearchBar================================================ --> */
+        #Searchbar{
+           background-image: url(Searchbar.jpg);
+           height: 300px;
+           width: 100%;
+        }
+        #Wellcome{
+            color: #990000;
+           padding-top: 7%;
+        }
+        /* <!-- ================================================SALE DEALS====================================================== --> */
+        #deals{
+          width: 100%;
+          display: flex;
+         }
+        .frame {
+          height: 200px;
+          width: 380px;
+          overflow: hidden;
+          float: right;
+          margin-right: 30px;
+          margin-left: 30px;
+        }
+        .zoomin img {
+          height: 100%;
+          width: 100%;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+        }
+        .zoomin img:hover 
+        {
+          width: 110%;
+          height: 110%;          
+        }
+
+/* ======================================SearchIcon==================================================== */
+        * {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+/* ========================================================SIDE BAR CSS==================================================================== */
+
+#mySidenav a {
+  position: fixed;
+  right: -80px;
+  transition: 0.3s;
+  padding: 13px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+#mySidenav a:hover {
+  right:0;
+}
+
+#about {
+  top: 250px;
+  background-color: #54758e;
+}
+
+#blog {
+  top: 305px;
+  background-color: #b74737;
+}
+
+#projects {
+  top:  360px;
+  background-color: #d78947;
+}
+
+
+/* ================================================Features Sliders Css=============================================== */
+.carousel {	
+	margin: 0 auto;
+	padding: 0 68px;
+}
+.carousel .carousel-item {
+	text-align: center;
+	overflow: hidden;
+	height: 140px;
+}
+.carousel .carousel-item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+}
+.carousel .carousel-item img {
+	margin: 0 auto;
+}
+.carousel-control-prev, .carousel-control-next {
+	width: 0px;
+	background: none;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 28px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin-top: -17px;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+}
+.carousel-indicators li.active {
+	background: #555;
+}
+
+
+  /* ================================================Comment Section================================================ */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+body{
+ background-color:#fff;
+ font-family: "Poppins", sans-serif;
+ font-weight: 300;
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+
+ .container{
+ margin-top: 66px;
+}
+
+  }
+
+.height{
+ height: 100vh;
+}
+
+.card{
+
+ border: none;
+ cursor: pointer;
+ box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.card:hover{
+
+ background-color: #eee;
+
+}
+
+.ratings i{
+
+ color: orange;
+}
+
+.testimonial-list{
+
+ list-style: none;
+}
+
+.testimonial-list li{
+
+ margin-bottom: 20px;
+}
+
+.testimonials-margin{
+
+ margin-top: -19px;
+}
+
+/* ============================================================Up Footer====================================================== */
+
+#test
+        {
+            display: flex;
+            margin-left: 9%;
+            margin-right: 2%;
+        } 
+  
+
+#sag:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* ============================================================Footer Css====================================================== */
+
+footer * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(abstract-background-squares-black-colors_444390-17572.jpg);
+            position: relative;
+            width: 100%;
+            min-height: 350px;
+            padding: 3rem 1rem;
+            
+        }
+        .footer-con {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-col {
+            min-width: 250px;
+            color: #f2f2f2f2;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0 2rem;
+        }
+        .footer-col .company-logo {
+            width: 150px;
+            margin-bottom: 25px;
+
+        }
+        .footer-col h3{
+            color: #b74737;
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        .footer-col h3::after{
+                content: '';
+                height: 3px;
+                width: 0px;
+                background-color: #54758e;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: 0.3 ease;
+        }
+        .footer-col h3:hover::after{
+            width: 50px;
+        }
+        .footer-col .social a i{
+            color: #b74737;
+            margin-top: 2rem;
+            margin-right: 5px;
+            transition: 0.3 ease;
+        }
+        .footer-col .social a i:hover{
+            transform: scale(1.5);
+            filter: grayscale(25);
+        }
+        .footer-col .footer-links a{
+            display: block;
+            text-decoration: none;
+            color: #54758e;
+            margin-bottom: 5px;
+            position: relative;
+            transition: 0.3s ease;
+        }
+        .footer-col .footer-links a::before{
+            content:'';
+            height: 16px;
+            width: 3px;
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            background-color: #b74737;
+            transition: 0.5s ease;
+            opacity: 0;
+        }
+        .footer-col .footer-links a:hover::before{
+            opacity: 1;
+        }
+        .footer-col .footer-links a:hover{
+            transform: translateX(-8px);
+            color: #b74737;
+        }
+        .footer-col .contact-deatails{
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .footer-col .contact-deatails i{
+            margin-right: 15px;
+        }
+        .footer-row .footer-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b74737;
+        }
+        .footer-row .footer-form input{
+            border: 0;
+            outline: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .footer-form button{
+            padding: 14px 20px;
+            border: 0;
+            border-radius: 6px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: #54758e;
+            cursor: pointer;
+        }
+
+        @media(max-width:900px)
+        {
+            .footer-row{
+                flex-direction: column;
+            }
+            .footer-col{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 25px;
+            }
+        }
+        @media(max-width:768px)
+        {
+            .footer-row{
+                flex-direction: column;
+            }
+            .footer-col{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 25px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+     <!-- ================================================NavBar===================================================== -->
+     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a href="index.html">  <img src="1-removebg-preview (1).png" id="logo"></a>
+          <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle navbar-text navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                All Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Computer/Laptop</a></li>
+                <li><a class="dropdown-item" href="#">Software</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+                <li><a class="dropdown-item" href="#">Gadgets</a></li>
+              </ul>
+            </li>
+          </ul>
+            
+          <a class="navbar-brand navbar-text" href="Popular Brand.html">Popular Brands</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" aria-current="page" href="Our_servicse2.html">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" href="Contact_us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-text navbar-brand" href="AboutUs.html">About Us </a>
+            </li>
+          </ul>
+        </div>
+        <a class="nav-link navbar-text navbar-brand" href="#">
+          <h3><i class="bi bi-cart4"></i></h3>
+          </a>
+          <a class="nav-link navbar-text navbar-brand" href="#">
+            <div id="myOverlay" class="overlay">
+              <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+              <div class="overlay-content">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div>
+            </div>
+              <h3><i class="bi bi-search" class="openBtn" onclick="openSearch()"></i></h3>
+          </a>
+        <a class="nav-link navbar-text navbar-brand" href="#">
+          Log in/Sign Up
+        </a>
+      </div>
+    </nav>
+    <!-- ==================================================SearchBar================================================ -->
+    <div id="Searchbar">
+     
+    </div><br><br>
+    <!-- ================================================SALE DEALS====================================================== -->
+    <div id="deals">
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210621.png"></div>
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210658.png"></div>
+    <div class="zoomin frame"><img src="Screenshot 2023-01-15 210739.png"></div>
+    </div>
+
+    <!-- ========================================================SIDE BAR===================================================================== -->
+
+    
+    <div id="mySidenav" class="sidenav fixed-top">
+      <a href="#" id="about" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <i class="bi bi-whatsapp"></i>
+        </svg>Whatsapp</a>
+      <a href="#" id="blog" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg>Phone</a>
+      <a href="#" id="projects" style="display: flex;"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+          <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
+          <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
+        </svg>Mail</a>
+  </div>
+
+      <!-- ===============================================Product================================================= -->
+    
+      <div class="product">
+        <div class="wrapper">
+          <div class="product-box">
+            <div class="all-images">
+              <div class="small-images">
+                <img src="lexar_3.jpg" onclick="clickimg(this)">
+                <img src="lexar_2.jpg" onclick="clickimg(this)">
+                <img src="lexar_1.jpg" onclick="clickimg(this)">
+                <img src="" onclick="clickimg(this)">
+              </div>
+            <div class="main-images">
+              <img src="lexar_3.jpg" id="imagebox">
+            </div>
+          </div>
+          </div>
+          <div class="product-text">
+            <div class="content">
+              <p class="brand"> Lexar SL210 1TB External SSD</p>
+              <h2>Lexar SL210 1TB External SSD</h2>
+              <div class="review">
+                <span>(4.6)</span>
+                <span class="fa fa-star"></span>
+              </div>
+              <div class="price-box">&#8360; ₨ 24,350</div>
+              <strike>&#8360; 26,900</strike>
+            </div>
+            <p>Size : <select name="size" id="">
+              <option value="select colur">select colour</option>
+              <option value="black">black</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
+              <option value="purple">purple</option>
+            </select></p>
+            <p>Quantity <input type="number" id="input-quantity" value="1"></p>
+            <button class="cart-button">
+              <span class="fa fa-shopping-cart"></span>
+              Add to Cart
+            </button>
+            <a href="Payment.html"><button class="buy-button">
+              <span class="fa fa-shopping-cart"></span>
+              Buy now
+            </button></a>
+            <h3>Description</h3>
+            <hr>
+            <p>• SSD-level performance – with speeds up to 550MB/s read and 450MB/s write
+                • Compact design of striking anodized aluminum with a fine sandblasted finish – available in space gray
+                • Exceptional durability for users on the go –– resists vibration and harsh temperature
+                • Includes 256-bit AES encryption software solution to securely protect files
+                • Features a USB Type-C (USB-C) port, and includes both USB Type-C to Type-C cable and USB Type-C to standard USB Type-A cable
+                Product Code: SL210 1TB
+                Brand: Lexar
+                Warranty: 1 Year Warranty</p>
+          </div>
+        </div>
+      </div>
+<br><br>
+       <!-- =============================================================Comment Section=========================================== -->
+    <div class="container">
+
+      <div class="accordion d-flex justify-content-center align-items-center height" id="accordionExample">
+ 
+ 
+ 
+ 
+          <div class="row">
+ 
+              <div class="col-md-6">
+                  
+                <div class="p-3">
+                  
+ 
+                
+                  <ul class="testimonial-list">
+                    <li>
+                     
+                       <div class="card p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+ 
+                         <div class="d-flex flex-row align-items-center">
+ 
+                           <img src="https://i.imgur.com/G1pXs7D.jpg" width="50" class="rounded-circle">
+ 
+                           <div class="d-flex flex-column ml-2">
+ 
+                             <span class="font-weight-normal">Milton Austin</span>
+                             <span>Sales Manager, Stack</span>
+                             
+                           </div>
+                           
+                         </div>
+                         
+                       </div>   
+                    </li>
+ 
+                    <li>
+                     <div class="card p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+ 
+                         <div class="d-flex flex-row align-items-center">
+ 
+                           <img src="https://i.imgur.com/udGH5tO.jpg" width="50" class="rounded-circle">
+ 
+                           <div class="d-flex flex-column ml-2">
+ 
+                             <span class="font-weight-normal">John Reeves</span>
+                             <span>Head of Sales, Asana</span>
+                             
+                           </div>
+                           
+                         </div>
+                         
+                       </div> 
+                    </li>
+ 
+                    <li>
+                     <div class="card p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+ 
+                         <div class="d-flex flex-row align-items-center">
+ 
+                           <img src="https://i.imgur.com/Uz4FjGZ.jpg" width="50" class="rounded-circle">
+ 
+                           <div class="d-flex flex-column ml-2">
+ 
+                             <span class="font-weight-normal">Luke Harper</span>
+                             <span>Sales Team Lead,Sketch</span>
+                             
+                           </div>
+                           
+                         </div>
+                         
+                       </div> 
+                    </li>
+ 
+                  </ul>
+                  </div>
+              </div>
+ 
+              <div class="col-md-6">
+               <div class="p-3 testimonials-margin">
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <h4>It was a great experience</h4>
+                          <div class="ratings">
+ 
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           
+                            
+                          </div>
+ 
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                  </div>
+ 
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <h4>Thanks for this great service</h4>
+                          <div class="ratings">
+ 
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                            
+                          </div>
+ 
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                  </div>
+ 
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                          <h4>You all are awesome thanks alot</h4>
+                          <div class="ratings">
+ 
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                           <i class="fa fa-star"></i>
+                            
+                          </div>
+ 
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                  </div>
+                  </div>
+ 
+              </div>
+ 
+          </div>
+      </div>
+ 
+  </div>
+
+       <!-- ========================================================Feature Slider======================================== -->
+<h1>Featured Manufacturers:</h1>
+<hr>
+<div class="container-xl">
+<div class="row">
+    <div class="col-md-9  mx-auto">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+               
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-4"><div class="img-box"><img src="Adope_logo2.png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="Dell_logo (2).png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="Apple_logo2.png" class="img-fluid" alt=""></div></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-4"><div class="img-box"><img src="Huawei_logo2.png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="Xbox_logo2.png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="samsung-logo-text-png-2.png" class="img-fluid" alt=""></div></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-4"><div class="img-box"><img src="Infinix2.png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="Panasonic_logo2.png" class="img-fluid" alt=""></div></div>
+                        <div class="col-sm-4"><div class="img-box"><img src="Philips_logo2.png" class="img-fluid" alt=""></div></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</div><br><br><br>
+
+<!-- ===================================================Up footer====================================================== -->
+<div id="test">
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+   
+      <div class="card-body">
+       <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16" id="sag">
+          <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
+          <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"/>
+        </svg>
+  
+        <h5 class="card-title">Free Shipping</h5>
+        <p class="card-text">For All Order Over Rs.<br5,000</p></center>
+      </div>
+    </div>
+
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+      
+      <div class="card-body">
+        <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16" id="sag">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+          <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+        </svg>
+        <h5 class="card-title">Delivery</h5>
+        <p class="card-text">Fastest & Safest COD <br> Service</p></center>
+      </div>
+    </div>
+
+    <div class="card text-bg-secondary mb-3" style="max-width: 18rem; margin-left: 10%;">
+     
+      <div class="card-body">
+        <center><svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16" id="sag">
+          <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+        </svg>
+        <h5 class="card-title">Quality Service</h5>
+        <p class="card-text">We Deliver Since 2020 <br>Quality Sevices</p></center>
+      </div>
+    </div>
+    </div>
+      <!-- ===================================================footer====================================================== -->
+      <footer>
+        <div class="footer-con">
+            <div class="footer-row">
+                <div class="footer-col" id="company">
+                    <img src="1-removebg-preview (1).png" class="company-logo">
+                    <p>PC CENTRE is one of the Pakistan’s Largest Online Store for IT Solutions. 
+                    Provide Wide Range of Hardwares, Softwares, Gadgets & Accessories at Affordable Prices.</p>
+                    
+                </div>
+                <div class="footer-col" id="all-categories">
+                 <h3>All Categories</h3>
+                 <div class="footer-links">
+                    <a href="#">Computer/Laptop</a>
+                    <a href="#">Softwares</a>
+                    <a href="#">E-watches</a>
+                    <a href="#">Computer Accessories</a>
+                    <a href="#">Mobile Accessories</a>
+                    <a href="#">Gadgets</a>
+                 </div>
+                </div>
+                <div class="footer-col" id="shop">
+                    <h3>Shop</h3>
+                    <div class="footer-links">
+                    <a href="#">Popular Brands</a>
+                    <a href="#">Sales & Deals</a>
+                    <a href="#">Shop3</a>
+                    <a href="#">Shop4</a>
+                    <a href="#">Shop4</a>
+                    <a href="#">Shop4</a>    
+                    </div>
+                </div>
+                <div class="footer-col" class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-deatails">
+                        <i class="fa fa-location"></i>
+                        <p>36 Street,Parklane <br>Zurich, Switzerland</p>
+                    </div>
+                    <div class="contact-deatails">
+                        <i class="fa fa-phone"></i>
+                        <p>+1-0987654321</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-form">
+                    <form action="">
+                        <h2>Subscribe To Newsletter</h2>
+                        <input type="text" placeholder="Enter Your Email...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>    
+    </footer>
+      
+  <!-- =====================================================Product JS================================================= -->
+      
+      <script>
+        function clickimg(smallImg){
+          var fullImg = document.getElementById("imagebox");
+          fullImg.src = smallImg.src
+        }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+      <script>
+        function openSearch() {
+          document.getElementById("myOverlay").style.display = "block";
+        }
+        
+        function closeSearch() {
+          document.getElementById("myOverlay").style.display = "none";
+        }
+        </script>
+      
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
